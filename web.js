@@ -12,7 +12,7 @@ fs.readFileSync('./index.html', function (err, data) {
 */
 
 app.get('/', function(request, response) {
-    //response.send('Hello World 2! modified 13:40 on July 9 2013!');
+    //response.send('Hello World 2! modified 17:40 on July 9 2013!');
     //use: fs.readFileSync(filename, [options])
     var outpt = fs.readFileSync('./index.html');
     response.send(outpt);
