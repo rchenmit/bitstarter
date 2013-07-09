@@ -17,17 +17,13 @@ app.get('/', function(request, response) {
 //    var inputFileBuffer = fs.readFileSync('./index.html'); 
 //    var outputToSite = inputFileBuffer.toString(inputFileBuffer);
 
-    var content;
-    fs.readFile('./index.html', function read(err, data) {
-        if (err) {
-            throw err;
-        }
-        content = data;
-    });
-    console.log(content);
+
+    var text = fs.readFileSync('./index.html', 'utf8');
+
+    console.log(text);
 
 
-    response.send(content);
+    response.send(text);
 });
 
 var port = process.env.PORT || 5000;
