@@ -14,15 +14,9 @@ fs.readFileSync('./index.html', function (err, data) {
 app.get('/', function(request, response) {
     //response.send('Hello World 2! modified 17:40 on July 9 2013!');
     //use: fs.readFileSync(filename, [options])
-//    var inputFileBuffer = fs.readFileSync('./index.html'); 
-//    var outputToSite = inputFileBuffer.toString(inputFileBuffer);
-
 
     var text = fs.readFileSync('./index.html', 'utf8');
-
     console.log(text);
-
-
     response.send(text);
 });
 
